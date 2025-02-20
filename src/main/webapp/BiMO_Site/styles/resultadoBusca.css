@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-= BODY GLOBAL =-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+body {
+    background-color: #F4F7E6;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 430%;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 190%;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 150%;
+    font-weight: 400;
+}
+
+
+.resultado {
+    text-align: center;
+}
+
+.linha {
+    margin: 2%;
+}
+
+.nomeColuna {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+p {
+    margin: 1%;
+    display: inline-block;
+}
+
+a {
+    text-align: center;
+}

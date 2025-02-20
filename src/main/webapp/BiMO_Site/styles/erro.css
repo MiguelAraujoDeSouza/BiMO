@@ -1,0 +1,82 @@
+
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo de corpo */
+html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #23C2FF 28.21%, #2CFC71 97.09%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+}
+
+/* Caixa centralizada */
+.error-box {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 60px 80px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%; 
+}
+
+/* Título e subtítulo */
+h1 {
+    font-size: 300%;
+    color: #23C2FF;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 250%;
+    color: #2CFC71;
+    margin: 20px 0;
+}
+
+/* Ícone de erro */
+.icon {
+    font-size: 6em;
+    background: linear-gradient(270deg, #23C2FF 28.21%, #2CFC71 97.09%);
+    color: white;
+    padding: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 30px 0;
+    width: 50%;
+}
+
+/* Botão de voltar */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 50px;
+    background-color: #2CFC71;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+.back-btn:hover {
+    background-color: #23C2FF;
+}
+
+
+@media (max-width: 843px) {
+    .error-box {
+        width: 40%;
+    }
+}

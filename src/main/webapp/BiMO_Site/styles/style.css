@@ -1,0 +1,530 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    user-select: none;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #F4F7E6;
+    scroll-behavior: smooth;
+}
+
+h1{
+    text-align: center;
+}
+/* ------------------------------------------------------ Menu fixo BiMO e Menu Lateral------------------------------------------------------- */
+.menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2176ae;
+    z-index: 1000;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 150%;
+    color: #F4F7E6;
+    list-style-type: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.menu-items .links {
+    color: #F4F7E6;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-items .links a {
+    color: #F4F7E6;
+    text-decoration: none;
+}
+
+.menu-items .links:hover{
+    color: #69DF1B;
+}
+
+.menu-items .links a:hover{
+    color: #69DF1B;
+}
+
+#icon{
+    width: 150px;
+    margin-left: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+#butmenu{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+/* -------------------------------------------------------- Menu Lateral BiMO -------------------------------------------- */
+.menuB{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menuLateral{
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 80px;
+    padding-top: 1px;
+    color: white;
+    display: none;
+    z-index: 999;
+}
+
+#menuLateral a{
+    display: flex;
+    justify-content: center;
+}
+
+.alogin{
+    height: 10vh;
+    text-decoration: none;
+    color: #2176ae;
+}
+
+.alogin:hover{
+    color: #69DF1B;
+}
+
+.fechado{
+    display: block;
+    width: 20px;
+    margin: 20px;
+}
+
+#fechar{
+    width: 40px;
+    height: 30px;
+}
+
+.menuB-area{
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px white solid;
+    padding: 0px 5vw;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.menuB-opcao{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 3vh 0vh;
+    padding: 2vh;
+    border-bottom: 4px solid white;
+}
+
+.menuB-opcao p{
+    width: 100%;
+    font-size: 5vh;
+    font-weight: 500;
+    display: inline-block;
+    color: #2176ae;
+}
+
+.menuB-opcao > p > img{
+    display: inline-block;
+    width: 5vh;
+}
+
+.menuB-opcao p:hover{
+    color: #69DF1B;
+}
+
+#menuLateral:target ~ * {
+    display: none;
+}
+  
+#menuLateral:target ~ header {
+    display: block;
+}
+
+#menuLateral:target {
+    display: block;
+}
+/* ------------------------------------------------------- Tela com imagem -------------------------------------------------------- */
+.inicio{
+    display: flex;
+    background: linear-gradient(to left,#2CFC71,#2176ae);
+    color: #F4F7E6;
+    font-size: 270%;
+    width: 100%;
+    height: 90vh;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inicio p{
+    line-height: 1.4;
+}
+
+.iniciobimo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding-left: 12%;
+    margin-top: 2%;
+}
+
+.iniciobimo p{
+    text-align: start;
+}
+
+#iconiniciobimo{
+    position: relative;
+    width: 150px;
+    margin-left: 6px;
+    top: 10px;
+}
+
+#butinicio{
+    margin-top: 4%;
+    border-radius: 30px;
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(to right,#74ee9d,#2176ae);
+    color: #F4F7E6;
+    border: 2px solid #F4F7E6;
+    cursor: pointer;
+    display: flex;
+    margin-right: 20%;
+}
+
+#divimginicio{
+    display: flex;
+    width: 40%;
+    height: 60vh;
+    justify-content: start;
+    align-items: center;
+}
+
+#imginicio{
+    max-width: 90%;
+    padding-left: 10%;
+    margin-top: 25%;
+}
+
+#quadrado{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #2CFC71;
+    transform: rotate(45deg);
+    z-index: -1;
+    margin-top: 580px;
+}
+/* ---------------------------------------------------- Como funciona o BiMO --------------------------------------------------------- */
+.propagandacm{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    background-color: white;
+    font-size: 110%;
+}
+
+#textocm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    line-height: 1.3;
+    font-size: 130%;
+}
+
+#textocm p{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#imgcm img{
+    width: 300px;
+}
+/* -------------------------------------------------------- Nossos serviços --------------------------------------------------------- */
+.propagandaservicos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-color: #74ee9d;
+}
+
+#imgpservicos img{
+    width: 280px;
+}
+
+#textoservicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 65%;
+    line-height: 1.3;
+    font-size: 130%;
+}
+
+#textoservicos p{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#buttextoservicos{
+    background-color: white;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* --------------------------------------------------------- Nossos planos ----------------------------------------------------------- */
+.propagandaplanos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    font-size: 110%;
+    margin-bottom: 60px;
+}
+
+#textoplanos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    line-height: 1.3;
+    font-size: 120%;
+}
+
+#textoplanos p{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#buttextoplanos{
+    background-color: #74ee9d;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#imgplanos img{
+    width: 280px;
+}
+/* -------------------------------------------------------- Menu final da tela ----------------------------------------------------- */
+#final {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: #2176ae;
+    align-content: center;
+}
+
+#final h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.redessociais {
+    display: inline-block;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.redessociais h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+}
+
+.redessociais a{
+    color: #F4F7E6;
+    text-decoration: none;
+    font-size: 130%;
+}
+
+.redessociais a:hover{
+    color: #69DF1B;
+}
+
+#instagram, #email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#iconinstagram, #iconemail {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#instagram p, #email p {
+    margin: 0;
+}
+
+#empresa {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin-left: 10%;
+}
+
+#empresa h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+}
+
+#imgkyndred {
+    width: 50%;
+}
+/* -------------------------------------------------------- Media Queries ---------------------------------------------------------- */
+@media screen and(max-width: 960px) {
+    .menu {
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .menu-items{
+        display: none;
+    }
+
+    #icon{
+        width: 120px;
+    }
+
+    #butmenu{
+        display: block;
+    }
+
+    .inicio{
+        margin-top: 76px;
+        font-size: 130%;
+        height: 320px;
+        background: linear-gradient(to top, #2176ae,#2CFC71);
+    }
+
+    .iniciobimo p{
+        width: 180%;
+        margin-right: 20%
+    }
+
+    #iconiniciobimo{
+        width: 30%;
+        height: 5vh;
+    }
+
+    #butinicio{
+        margin-top: 10%;
+    }
+
+    #divimginicio{
+        display: none;
+    }
+
+    #imginicio{
+        display: none;
+    }
+
+    .propagandacm{
+        height: 55vh;
+    }
+
+    .propagandaservicos{
+        height: 60vh;
+    }
+
+    .propagandaplanos{
+        height: 70vh;
+    }
+
+    #textocm, #textoservicos, #textoplanos{
+        width: 90%;
+        font-size: 90%;
+    }
+
+    #textocm > p, #textoservicos > p, #textoplanos > p{
+        margin-top: 20px;
+    }
+
+    #imgcm, #imgpservicos, #imgplanos{
+        display: none;
+    }
+
+    .redessociais{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 6%;
+    }
+
+    .redessociais h2{
+        margin-bottom: 6%;
+    }
+
+    #empresa{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .propagandacm{
+        height: 92vh;
+    }
+
+    .propagandaservicos{
+        height: 95vh;
+    }
+
+    .propagandaplanos{
+        height: 105vh;
+    }
+}

@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4F7E6;
+    scroll-behavior: smooth;
+    height: 100vh;
+    background: linear-gradient(to right, #23C2FF , #2CFC71);
+}
+
+#pagelogin{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#seta{
+    font-size: 300%;
+    padding: 0.5%;
+    color: #23C2FF;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+/* Interface do form */
+.formLogin {
+    display: flex;
+    width: 80%;
+    margin-top: 7%;
+    height: 70vh;
+}
+
+/* Estilo do H1 */
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 230%;
+    text-align: center;
+
+}
+/* Cor do "p" */
+.formLogin p {
+    font-size: 87.5%;
+    margin-bottom: 25px;
+    margin: 0;
+    text-align: center;
+}
+/* Estilo da barra do input */
+.formLogin .input {
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: 2px solid #23C2FF;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    transition: all linear 160ms;
+    outline: none;
+    width: 400px;
+}
+
+.formLogin .input::placeholder{
+    color: #23C2FF;
+}
+
+/* Quando clicar na barra de input fica com a borda verde */
+.formLogin input:focus {
+    border: 2px solid #69DF1B;
+}
+
+/* Interface do "a" */
+.formLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    transition: all linear 160ms;
+}
+
+#imglogin{
+    width: 70%;
+}
+
+#img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: lightblue;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.clogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 8%;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.clogin h1{
+    margin-top: 5%;
+    margin-bottom: 8%;
+    font-weight: bold;
+    color: #23C2FF;
+    font-size: 300%;
+}
+
+.clogin label{
+    color: #23C2FF;
+}
+
+/* Texto de erro da página de erro */
+.clogin p{
+    color: red;
+}
+/* ------------------------------- */
+.olho-senha{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 440px;
+}
+
+#olhinho {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 23px;
+}
+
+/* ------------------------------- */
+
+#butentrar{
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 30px;
+    margin-top: 7%;
+    transition: all linear 160ms;
+    outline: none;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: linear-gradient(to right,#2CFC71,#23C2FF);
+    border: 2px solid white;
+    color: white;
+    font-size: 130%;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #seta{
+        font-size: 280%;
+        padding: 0;
+    }
+
+    .login{
+        justify-content: start;
+        align-items: center;
+        height: 900px;
+    }
+
+    .formLogin{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #pagelogin{
+        height: 108%;
+    }
+
+    .login{
+        align-items: center;
+        height: 800px;
+    }
+
+    .formLogin{
+        height: 500px;
+    }
+
+    .olho-senha{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #pagelogin{
+       display: block;
+       height: 115%;
+    }
+
+    #seta{
+       font-size: 250%;
+    }
+
+    .login{
+        align-items: center;
+        height: 450px;
+    }
+
+    .formLogin{
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    #img{
+        display: none;
+    }
+
+    .clogin{
+        width: 75%;
+        padding: 4%;
+        border-radius: 30px;
+    }
+
+    .clogin h1{
+        font-size: 230%;
+    }
+
+    .formLogin .input{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #pagelogin{
+        height: 200%;
+     }
+
+     .login{
+         align-items: center;
+         height: 320px;
+     }
+
+     .formLogin .input{
+        width: 200px;
+     }
+}
+
+@media screen and (max-width: 200px) {
+    #pagelogin{
+        height: 230%;
+    }
+}

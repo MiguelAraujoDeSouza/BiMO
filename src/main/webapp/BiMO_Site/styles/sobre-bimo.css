@@ -1,0 +1,497 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #F4F7E6;
+    scroll-behavior: smooth;
+}
+
+h1{
+    text-align: center;
+}
+/* ------------------------------------------------------ Menu fixo BiMO e Menu Lateral------------------------------------------------------- */
+.menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2176ae;
+    z-index: 1000;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 150%;
+    color: #F4F7E6;
+    list-style-type: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.menu-items .links {
+    color: #F4F7E6;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-items .links a {
+    color: #F4F7E6;
+    text-decoration: none;
+}
+
+.menu-items .links:hover{
+    color: #69DF1B;
+}
+
+.menu-items .links a:hover{
+    color: #69DF1B;
+}
+
+#icon{
+    width: 150px;
+    margin-left: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+#butmenu{
+    display: none;
+    width: 35px;
+}
+/* -------------------------------------------------------- Menu Lateral BiMO -------------------------------------------- */
+.menuB{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menuLateral{
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 80px;
+    padding-top: 1px;
+    color: white;
+    display: none;
+    z-index: 999;
+}
+
+#menuLateral a{
+    display: flex;
+    justify-content: center;
+}
+
+.alogin{
+    height: 10vh;
+    text-decoration: none;
+    color: #2176ae;
+}
+
+.alogin:hover{
+    color: #69DF1B;
+}
+
+.fechado{
+    display: block;
+    width: 20px;
+    margin: 20px;
+}
+
+#fechar{
+    width: 40px;
+    height: 30px;
+}
+
+.menuB-area{
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px white solid;
+    padding: 0px 5vw;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.menuB-opcao{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 3vh 0vh;
+    padding: 2vh;
+    border-bottom: 4px solid white;
+}
+
+.menuB-opcao p{
+    width: 100%;
+    font-size: 5vh;
+    font-weight: 500;
+    display: inline-block;
+    color: #2176ae;
+}
+
+.menuB-opcao > p > img{
+    display: inline-block;
+    width: 5vh;
+}
+
+.menuB-opcao p:hover{
+    color: #69DF1B;
+}
+
+#menuLateral:target ~ * {
+    display: none;
+}
+  
+#menuLateral:target ~ header {
+    display: block;
+}
+
+#menuLateral:target {
+    display: block;
+}
+/* ------------------------------------------------- Texto explicando sobre o BiMO ----------------------------------------------*/
+#o-que-e{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+
+#o-que-e p{
+    font-size: 200%;
+}
+
+#textobimo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 40vh;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 70%;
+    color: #286893;
+    background-color: #c1ddef;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+#butbimo{
+    margin-top: 4%;
+    border-radius: 30px;
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(to right,#74ee9d,#2176ae);
+    color: #F4F7E6;
+    border: solid #d3edfd;
+    cursor: pointer;
+}
+/* ---------------------------------------------------- Como funciona o BiMO --------------------------------------------------------- */
+#como-funciona{
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-size: 150%;
+    background-color: #2176ae;
+    width: 100%;
+    height: 80vh;
+    color: white;
+    border-top: 4px solid #69DF1B;
+    border-bottom: 4px solid #69DF1B;
+}
+
+.cards{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 2%;
+}
+
+.funcoes{
+    text-align: center;
+    width: 75%;
+    font-size: 70%;
+    margin: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: black;
+    background-color: white;
+}
+
+.funcoes p{
+    margin-top: 10px;
+}
+
+.funcoes:hover {
+    transform: scale(1.1);
+}
+
+.direita{
+    position: relative;
+    left: 200px;
+}
+
+.imgfuncao{
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+#telainicial{
+    width: 260px;
+    height: 500px;
+}
+
+/* -------------------------------------------------------- Nossa equipe ------------------------------------------------------------ */
+#nossa-equipe {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 80px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.equipecarrossel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 40%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.equipe {
+    min-width: 100%;
+    height: 50vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.eazul {
+    background-color: #008dbbb7;
+}
+
+.everde {
+    background-color: #80cc35;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.arrow {
+    color: #F4F7E6;
+    background-color: #008dbbb7;
+    border: 4px solid;
+    font-size: 70px;
+    margin: 80px;
+    border-radius: 50%;
+    width: 90px;
+    cursor: pointer;
+    display: none;
+}
+
+.arrow:hover{
+    color: #008dbbb7;
+    background-color: #F4F7E6;
+    border-color: #2176ae;
+}
+
+/* Estilos para controlar a exibição dos cards */
+#card1:checked ~ .carousel-container .carousel {
+    transform: translateX(0);
+}
+
+#card2:checked ~ .carousel-container .carousel {
+    transform: translateX(-100%);
+}
+
+#card3:checked ~ .carousel-container .carousel {
+    transform: translateX(-200%);
+}
+
+#card4:checked ~ .carousel-container .carousel {
+    transform: translateX(-300%);
+}
+
+#card5:checked ~ .carousel-container .carousel {
+    transform: translateX(-400%);
+}
+
+#card6:checked ~ .carousel-container .carousel {
+    transform: translateX(-500%);
+}
+
+#card7:checked ~ .carousel-container .carousel {
+    transform: translateX(-600%);
+}
+
+#card8:checked ~ .carousel-container .carousel {
+    transform: translateX(-700%);
+}
+
+#card9:checked ~ .carousel-container .carousel {
+    transform: translateX(-800%);
+}
+
+#card10:checked ~ .carousel-container .carousel {
+    transform: translateX(-900%);
+}
+
+#card11:checked ~ .carousel-container .carousel {
+    transform: translateX(-1000%);
+}
+
+/* Controle para setas de navegação cíclica */
+/* Mostrar as setas corretas dependendo do card ativo */
+#card1:checked ~ .navigation .prev[for="card11"],
+#card1:checked ~ .navigation .next[for="card2"],
+#card2:checked ~ .navigation .prev[for="card1"],
+#card2:checked ~ .navigation .next[for="card3"],
+#card3:checked ~ .navigation .prev[for="card2"],
+#card3:checked ~ .navigation .next[for="card4"],
+#card4:checked ~ .navigation .prev[for="card3"],
+#card4:checked ~ .navigation .next[for="card5"],
+#card5:checked ~ .navigation .prev[for="card4"],
+#card5:checked ~ .navigation .next[for="card6"],
+#card6:checked ~ .navigation .prev[for="card5"],
+#card6:checked ~ .navigation .next[for="card7"],
+#card7:checked ~ .navigation .prev[for="card6"],
+#card7:checked ~ .navigation .next[for="card8"],
+#card8:checked ~ .navigation .prev[for="card7"],
+#card8:checked ~ .navigation .next[for="card9"],
+#card9:checked ~ .navigation .prev[for="card8"],
+#card9:checked ~ .navigation .next[for="card10"],
+#card10:checked ~ .navigation .prev[for="card9"],
+#card10:checked ~ .navigation .next[for="card11"],
+#card11:checked ~ .navigation .prev[for="card10"],
+#card11:checked ~ .navigation .next[for="card1"] {
+    display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+    .menu-items{
+        display: none;
+    }
+
+    #textobimo{
+        width: 80%;
+        height: 80vh;
+    }
+
+    #como-funciona{
+        height: 80vh;
+    }
+
+    .funcoes{
+        width: 120%;
+    }
+
+    .direita{
+        left: 0px;
+    }
+
+    #telainicial{
+        display: none;
+    }
+
+    .carousel-container{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .equipe{
+        height: 67vh;
+    }
+
+    .image img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #textobimo{
+        height: 120vh;
+    }
+
+    #como-funciona{
+        height: 120vh;
+    }
+
+    .funcoes{
+        width: 110%;
+    }
+
+    .equipe{
+        margin-top: 20px;
+        height: 115vh;
+    }
+}

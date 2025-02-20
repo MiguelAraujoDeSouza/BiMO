@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #F4F7E6;
+    scroll-behavior: smooth;
+}
+
+h1{
+    text-align: center;
+}
+/* ------------------------------------------------------ Menu fixo BiMO ------------------------------------------------------- */
+.menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2176ae;
+    z-index: 1000;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 150%;
+    color: #F4F7E6;
+    list-style-type: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.menu-items .links {
+    color: #F4F7E6;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-items .links a {
+    color: #F4F7E6;
+    text-decoration: none;
+}
+
+.menu-items .links:hover{
+    color: #69DF1B;
+}
+
+.menu-items .links a:hover{
+    color: #69DF1B;
+}
+
+#icon{
+    width: 150px;
+    margin-left: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+#butmenu{
+    display: none;
+    width: 35px;
+}
+/* -------------------------------------------------------- Menu Lateral BiMO -------------------------------------------- */
+.menuB{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menuLateral{
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 80px;
+    padding-top: 1px;
+    color: white;
+    display: none;
+    z-index: 999;
+}
+
+#menuLateral a{
+    display: flex;
+    justify-content: center;
+}
+
+.alogin{
+    height: 10vh;
+    text-decoration: none;
+    color: #2176ae;
+}
+
+.alogin:hover{
+    color: #69DF1B;
+}
+
+.fechado{
+    display: block;
+    width: 20px;
+    margin: 20px;
+}
+
+#fechar{
+    width: 40px;
+    height: 30px;
+}
+
+.menuB-area{
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px white solid;
+    padding: 0px 5vw;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.menuB-opcao{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 3vh 0vh;
+    padding: 2vh;
+    border-bottom: 4px solid white;
+}
+
+.menuB-opcao p{
+    width: 100%;
+    font-size: 5vh;
+    font-weight: 500;
+    display: inline-block;
+    color: #2176ae;
+}
+
+.menuB-opcao > p > img{
+    display: inline-block;
+    width: 5vh;
+}
+
+.menuB-opcao p:hover{
+    color: #69DF1B;
+}
+
+#menuLateral:target ~ * {
+    display: none;
+}
+  
+#menuLateral:target ~ header {
+    display: block;
+}
+
+#menuLateral:target {
+    display: block;
+}
+/* -------------------------------------------------------- Tela com imagem de fundo ----------------------------------------------------- */
+.bimoplanos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/planosimg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.bimoplanos::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bimoplanostexto {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    max-width: 600px;
+    font-size: 200%;
+}
+
+.bimoplanostexto h1 {
+    margin-bottom: 20px;
+}
+
+.bimoplanostexto p {
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------- Cards Planos BiMO ---------------------------------------------------------------*/
+#nossos-planos h1{
+    text-align: center;
+    font-size: 220%;
+}
+
+.planos-bimo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    max-width: 320px;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    margin: 4%;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    background-color: #EAE9E9;
+}
+
+.card h1, .card h3{
+    margin: 8%;
+}
+
+.bronze span{
+    color: #c67838;
+}
+
+.prata span{
+    color: #c0c0c0;
+}
+
+.ouro span{
+    color: #ffcc00;
+}
+
+.card .borda{
+    height: 15px;
+}
+
+.bronze .borda{
+    background-color: #c67838;
+}
+
+.prata .borda{
+    background-color: #c0c0c0;
+}
+
+.ouro .borda{
+    background-color: #ffcc00;
+}
+
+.planos{
+    padding: 0 20px;
+    text-align: center;
+}
+
+#butplanos{
+    color: #F4F7E6;
+    width: 100px;
+    height: 25px;
+    border-radius: 30px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.bronze #butplanos{
+    background-color: #c67838;
+}
+
+.prata #butplanos{
+    background-color: #c0c0c0;
+}
+
+.ouro #butplanos{
+    background-color: #ffcc00;
+}
+
+@media screen and (max-width: 960px) {
+    .bimoplanostexto{
+        font-size: 160%;
+    }
+
+    .card{
+        margin-bottom: 40px;
+    }
+
+    .menu-items{
+        display: none;
+    }
+}
